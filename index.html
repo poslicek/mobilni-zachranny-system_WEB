@@ -10,10 +10,41 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="site-header"></div>
-    <script src="js/header.js"></script>
-    <main class="home-content">
-        <h1>O systému MZS</h1>
-    </main>
+    <div class="home-screen">
+        <div id="site-header"></div>
+        <script src="js/header.js"></script>
+        <main class="uvod">
+            <div class="uvod-content">
+                <h1><a href="#strategicky-vyznam">O systému MZS <br> ▼</a></h1>
+
+            </div>
+        </main>
+    </div>
+    <section id="strategicky-vyznam" class="strategicky-vyznam" aria-labelledby="strategicky-vyznam-title">
+        <img src="images/strategickyVyznam.webp" alt="" class="strategicky-vyznam-image" loading="lazy">
+        <div class="strategicky-vyznam-content">
+            <h2 id="strategicky-vyznam-title">Strategický význam</h2>
+            <p>MZS přináší kraji schopnost rychle vytvořit přímo v místě mimořádné události samostatně fungující zdravotnický a logistický Stabilizační bod. Ten umožňuje soustředit zdravotnickou pomoc v postižené oblasti, zajistit příjem a ošetření zraněných a vytvořit zázemí pro jejich další transport do specializovaných zdravotnických zařízení.</p>
+        </div>
+    </section>
+    <section class="retezec-zachrany" aria-labelledby="retezec-zachrany-title">
+        <img src="images/retezecZachrany.webp" alt="Záchranáři u terénního vozidla v přírodě" class="retezec-zachrany-image" loading="lazy">
+        <div class="retezec-zachrany-content">
+            <h2 id="retezec-zachrany-title">Řetězec záchrany</h2>
+            <p>MZS je komplexní systém zdravotnické, záchranné, logistické a humanitární podpory určený pro nasazení při rozsáhlých mimořádných událostech, kdy je nutné rozšířit dostupné kapacity a zajistit kontinuitu péče o postižené osoby.
+Základním principem systému je návaznost jednotlivých fází záchrany:</p>
+        </div>
+    </section>
+    <section class="postup-pece" aria-labelledby="postup-pece-title">
+        <ol class="postup-pece-steps">
+            <li>Nález</li>
+            <li>Prvotní stabilizace</li>
+            <li>Odsun</li>
+            <li>Stabilizační bod</li>
+            <li>Specializovaná zdravotnická péče</li>
+            <li>Transport</li>
+        </ol>
+    </section>
+    <div class="home-screen home-screen-empty" aria-hidden="true"></div>
 </body>
 </html>

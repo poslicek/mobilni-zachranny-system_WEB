@@ -4,7 +4,6 @@ const headerContainer = document.getElementById("site-header");
 
 const navigationLinks = [
     ["index.html", "O systému MZS"],
-    ["stabilizacni-bod/index.html", "Stabilizační bod"],
     ["operacni-schopnosti/index.html", "Operační schopnosti"],
     ["nasazeni-a-zkusenosti/index.html", "Nasazení a zkušenosti"],
     ["krizove-rizeni/index.html", "Pro krizové řízení"],

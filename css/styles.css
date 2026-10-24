@@ -17,9 +17,17 @@
 
 body {
     min-height: 100vh;
+    min-height: 100svh;
     margin: 0;
     background: var(--black);
     color: var(--white);
+}
+
+.home-screen {
+    display: flex;
+    min-height: 100vh;
+    min-height: 100svh;
+    flex-direction: column;
 }
 
 .site-header {
@@ -74,7 +82,7 @@ body {
     padding: 25px 0 23px;
     border-bottom: 2px solid transparent;
     color: var(--muted);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     text-decoration: none;
     transition: color 160ms ease, border-color 160ms ease;
 }
@@ -86,13 +94,184 @@ body {
     color: var(--white);
 }
 
-.home-content {
-    padding: 72px 6vw;
+.uvod {
+    position: relative;
+    display: flex;
+    flex: 1 0 0;
+    min-height: 0;
+    align-items: flex-end;
+    width: 100%;
+    overflow: hidden;
+    background: url("../images/hlavni.webp") center / cover no-repeat;
 }
 
-.home-content h1 {
+.uvod::before {
+    position: absolute;
+    inset: 0;
+    background: rgb(255 255 255 / 50%);
+    content: "";
+}
+
+.uvod-content {
+    position: relative;
+    width: 100%;
+    padding: 72px 6vw;
+    text-align: center;
+}
+
+.uvod h1 {
     margin: 0;
+    color: var(--black);
     font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.uvod h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.uvod h1 a:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 6px;
+}
+
+.strategicky-vyznam {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background: var(--panel);
+    margin: 80px 6vw;
+    scroll-margin-top: 24px;
+    overflow: hidden;
+    border: 1px solid #394654;
+    border-radius: 8px;
+}
+
+.strategicky-vyznam-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.strategicky-vyznam-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px clamp(24px, 4vw, 64px);
+}
+
+.strategicky-vyznam-content h2 {
+    margin: 0 0 20px;
+    font-size: clamp(1.75rem, 3vw, 2.6rem);
+}
+
+.strategicky-vyznam-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.75;
+}
+
+.retezec-zachrany {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "content image";
+    margin: 80px 6vw;
+    overflow: hidden;
+    border: 1px solid #394654;
+    border-radius: 8px;
+    background: #1b252f;
+}
+
+.retezec-zachrany-image {
+    display: block;
+    grid-area: image;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.retezec-zachrany-content {
+    display: flex;
+    grid-area: content;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px clamp(24px, 4vw, 64px);
+}
+
+.retezec-zachrany-content h2 {
+    margin: 0 0 20px;
+    font-size: clamp(1.75rem, 3vw, 2.6rem);
+}
+
+.retezec-zachrany-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.75;
+}
+
+.postup-pece {
+    display: flex;
+    min-height: 50vh;
+    min-height: 50svh;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 48px 6vw 64px;
+    background: var(--panel);
+}
+
+.home-screen-empty {
+    background: var(--black);
+}
+
+.postup-pece h2 {
+    margin: 0 0 24px;
+    font-size: 1.5rem;
+}
+
+.postup-pece-steps {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.postup-pece-steps li {
+    position: relative;
+    display: flex;
+    min-height: 112px;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    border: 4px solid var(--white);
+    border-radius: 8px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.postup-pece-steps li:nth-child(2n) {
+    border-color: var(--red );
+}
+
+.postup-pece-steps li:not(:last-child)::after {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 8px);
+    color: var(--blue);
+    content: "→";
+    font-size: 1.25rem;
+    font-weight: 700;
+    transform: translateY(-50%);
 }
 
 @media (max-width: 1100px) {
@@ -116,7 +295,54 @@ body {
 
     .site-nav a {
         padding: 8px 0 12px;
-        font-size: 0.88rem;
+        font-size: 0.94rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .strategicky-vyznam {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .strategicky-vyznam-image {
+        height: min(65vw, 420px);
+        aspect-ratio: auto;
+    }
+
+    .strategicky-vyznam-content {
+        padding: 32px 6vw 40px;
+    }
+
+    .retezec-zachrany {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "image"
+            "content";
+    }
+
+    .retezec-zachrany-image {
+        height: min(65vw, 420px);
+        aspect-ratio: auto;
+    }
+
+    .retezec-zachrany-content {
+        padding: 32px 6vw 40px;
+    }
+
+    .postup-pece-steps {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .postup-pece-steps li {
+        min-height: 76px;
+    }
+
+    .postup-pece-steps li:not(:last-child)::after {
+        top: calc(100% + 1px);
+        left: 50%;
+        content: "↓";
+        transform: translateX(-50%);
     }
 }
 
