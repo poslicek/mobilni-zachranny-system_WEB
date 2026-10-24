@@ -1,0 +1,143 @@
+:root {
+    color-scheme: dark;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    background: #090c10;
+    color: #f6f8fa;
+    --black: #090c10;
+    --panel: #11161d;
+    --white: #f6f8fa;
+    --muted: #bac3cd;
+    --red: #e63946;
+    --blue: #2878d0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--black);
+    color: var(--white);
+}
+
+.site-header {
+    position: relative;
+    display: flex;
+    min-height: 108px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    overflow: hidden;
+    padding: 8px 6vw;
+    border-bottom: 1px solid #29313b;
+    background: linear-gradient(
+        106deg,
+        var(--white) 0 28%,
+        var(--panel) 28% 100%
+    );
+    font-size: 1.25rem;
+    font-family: "Impact", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.brand {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand-logo {
+    display: block;
+    width: 88px;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.site-nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(16px, 3vw, 40px);
+}
+
+.site-nav a {
+    padding: 25px 0 23px;
+    border-bottom: 2px solid transparent;
+    color: var(--muted);
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 160ms ease, border-color 160ms ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a[aria-current="page"] {
+    border-bottom-color: var(--red);
+    color: var(--white);
+}
+
+.home-content {
+    padding: 72px 6vw;
+}
+
+.home-content h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+@media (max-width: 1100px) {
+    .site-header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 10px 6vw 0;
+        background: linear-gradient(
+            106deg,
+            var(--white) 0 16%,
+            var(--panel) 16% 100%
+        ) top left / 100% 82px no-repeat, var(--panel);
+    }
+
+    .brand-logo {
+        width: clamp(56px, 7vw, 72px);
+    }
+
+    .site-nav {
+        gap: 16px;
+    }
+
+    .site-nav a {
+        padding: 8px 0 12px;
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .site-header {
+        background: linear-gradient(
+            106deg,
+            var(--white) 0 23%,
+            var(--panel) 23% 100%
+        ) top left / 100% 82px no-repeat, var(--panel);
+    }
+
+    .brand-logo {
+        width: clamp(48px, 16vw, 64px);
+    }
+}
+
+@media (max-width: 360px) {
+    .site-title {
+        font-size: 1rem;
+    }
+}
