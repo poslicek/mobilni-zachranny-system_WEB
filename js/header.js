@@ -3,7 +3,7 @@ const currentPage = window.location.pathname.slice(projectRoot.pathname.length).
 const headerContainer = document.getElementById("site-header");
 
 const navigationLinks = [
-    ["o-systemu-mzs/index.html", "O systému MZS"],
+    ["index.html", "O systému MZS"],
     ["stabilizacni-bod/index.html", "Stabilizační bod"],
     ["operacni-schopnosti/index.html", "Operační schopnosti"],
     ["nasazeni-a-zkusenosti/index.html", "Nasazení a zkušenosti"],
@@ -15,9 +15,8 @@ const navigationLinks = [
 headerContainer.innerHTML = `
     <header class="site-header">
         <a class="brand" href="${new URL("index.html", projectRoot)}" aria-label="MZS - hlavní stránka">
-            <img class="brand-logo" src="${new URL("images/mzslogo.png", projectRoot)}" alt="Logo MZS">
+            <img class="brand-logo" src="${new URL("images/velkeLogoSTextem.webp", projectRoot)}" alt="Logo MZS">
         </a>
-        <p class="site-title">Mobilní záchranný systém</p>
         <nav class="site-nav" aria-label="Hlavní navigace">
             ${navigationLinks.map(([href, label]) => `
                 <a href="${new URL(href, projectRoot)}"${currentPage === href ? ' aria-current="page"' : ""}>${label}</a>

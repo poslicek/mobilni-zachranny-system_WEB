@@ -46,6 +46,7 @@ body {
     z-index: 1;
     display: inline-flex;
     flex: 0 0 auto;
+    max-width: 100%;
     align-items: center;
     color: var(--white);
     text-decoration: none;
@@ -53,9 +54,10 @@ body {
 
 .brand-logo {
     display: block;
-    width: 88px;
-    height: auto;
-    aspect-ratio: 1;
+    flex: 0 0 auto;
+    width: auto;
+    height: clamp(64px, 8vw, 104px);
+    max-width: 100%;
     object-fit: contain;
 }
 
@@ -103,13 +105,9 @@ body {
         padding: 10px 6vw 0;
         background: linear-gradient(
             106deg,
-            var(--white) 0 16%,
-            var(--panel) 16% 100%
+            var(--white) 0 36%,
+            var(--panel) 36% 100%
         ) top left / 100% 82px no-repeat, var(--panel);
-    }
-
-    .brand-logo {
-        width: clamp(56px, 7vw, 72px);
     }
 
     .site-nav {
@@ -126,14 +124,11 @@ body {
     .site-header {
         background: linear-gradient(
             106deg,
-            var(--white) 0 23%,
-            var(--panel) 23% 100%
+            var(--white) 0 70%,
+            var(--panel) 70% 100%
         ) top left / 100% 82px no-repeat, var(--panel);
     }
 
-    .brand-logo {
-        width: clamp(48px, 16vw, 64px);
-    }
 }
 
 @media (max-width: 360px) {
