@@ -4,11 +4,11 @@ const headerContainer = document.getElementById("site-header");
 
 const navigationLinks = [
     ["index.html", "O systému MZS"],
-    ["operacni-schopnosti/index.html", "Operační schopnosti"],
-    ["nasazeni-a-zkusenosti/index.html", "Nasazení a zkušenosti"],
-    ["krizove-rizeni/index.html", "Pro krizové řízení"],
-    ["o-nas/index.html", "O nás"],
-    ["kontakt/index.html", "Kontakt"],
+    ["operacni-schopnosti/", "Operační schopnosti"],
+    ["nasazeni-a-zkusenosti/", "Nasazení a zkušenosti"],
+    ["krizove-rizeni/", "Pro krizové řízení"],
+    ["o-nas/", "O nás"],
+    ["kontakt/", "Kontakt"],
 ];
 
 headerContainer.innerHTML = `
