@@ -3,7 +3,7 @@ const currentPage = window.location.pathname.slice(projectRoot.pathname.length).
 const headerContainer = document.getElementById("site-header");
 
 const navigationLinks = [
-    ["index.html", "O systému MZS"],
+    ["", "O systému MZS"],
     ["operacni-schopnosti/", "Operační schopnosti"],
     ["nasazeni-a-zkusenosti/", "Nasazení a zkušenosti"],
     ["krizove-rizeni/", "Pro krizové řízení"],
