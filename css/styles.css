@@ -552,7 +552,7 @@ body {
 
 @media (max-width: 760px) {
     .o-nas-page {
-        grid-template-rows: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        grid-template-rows: minmax(96px, 0.45fr) minmax(0, 1.55fr);
     }
 
     .o-nas-page__content {
@@ -677,7 +677,39 @@ body {
     }
 
     .kontakt-page {
-        grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .o-nas-page__content {
+        gap: 10px;
+        padding-right: 6vw;
+        padding-left: 6vw;
+    }
+
+    .o-nas-page__eyebrow {
+        margin-bottom: 5px;
+        font-size: 0.68rem;
+    }
+
+    .o-nas-page__title h1 {
+        font-size: 2rem;
+    }
+
+    .o-nas-page__text p {
+        font-size: 0.88rem;
+        line-height: 1.35;
+    }
+
+    .o-nas-page__text p + p {
+        margin-top: 8px;
+    }
+
+    .kontakt-page__image {
+        display: none;
+    }
+
+    .kontakt-page__content {
+        border-left: 0;
     }
 
     .kontakt-page__content {
@@ -734,8 +766,14 @@ body {
 
 @media (max-height: 700px) {
     .o-nas-page__content {
-        padding-top: 16px;
-        padding-bottom: 16px;
+        gap: 12px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .o-nas-page__text p {
+        font-size: 0.94rem;
+        line-height: 1.4;
     }
 
     .kontakt-page__content {
@@ -751,6 +789,21 @@ body {
 
     .kontakt-velitel {
         padding-top: 10px;
+    }
+}
+
+@media (max-width: 560px) and (max-height: 700px) {
+    .o-nas-page {
+        grid-template-rows: minmax(0, 1fr);
+    }
+
+    .o-nas-page__image {
+        display: none;
+    }
+
+    .o-nas-page__text p {
+        font-size: 0.78rem;
+        line-height: 1.3;
     }
 }
 
