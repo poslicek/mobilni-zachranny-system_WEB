@@ -245,6 +245,202 @@ body {
     background: var(--panel);
 }
 
+.o-nas-page-body {
+    display: flex;
+    height: 100vh;
+    height: 100svh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.o-nas-page-body #site-header {
+    flex: 0 0 auto;
+}
+
+.o-nas-page {
+    display: grid;
+    flex: 1 1 auto;
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+    overflow: hidden;
+    background: var(--panel);
+}
+
+.o-nas-page__image {
+    min-height: 0;
+    overflow: hidden;
+    background: #1b252f;
+}
+
+.o-nas-page__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 55%;
+}
+
+.o-nas-page__content {
+    display: grid;
+    min-height: 0;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 80px);
+    padding: 36px 10vw;
+    border-top: 1px solid #394654;
+}
+
+.o-nas-page__eyebrow {
+    margin: 0 0 12px;
+    color: var(--red);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.o-nas-page__title h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+}
+
+.o-nas-page__text p {
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1rem, 1.35vw, 1.2rem);
+    line-height: 1.65;
+}
+
+.o-nas-page__text p + p {
+    margin-top: 14px;
+}
+
+.kontakt-page-body {
+    display: flex;
+    height: 100vh;
+    height: 100svh;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.kontakt-page-body #site-header {
+    flex: 0 0 auto;
+}
+
+.kontakt-page {
+    display: grid;
+    flex: 1 1 auto;
+    min-height: 0;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    overflow: hidden;
+    background: var(--panel);
+}
+
+.kontakt-page__image {
+    min-width: 0;
+    overflow: hidden;
+    background: #1b252f;
+}
+
+.kontakt-page__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kontakt-page__content {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: clamp(24px, 5vh, 64px) clamp(24px, 5vw, 80px);
+    border-left: 1px solid #394654;
+}
+
+.kontakt-page__eyebrow {
+    margin: 0 0 8px;
+    color: var(--red);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.kontakt-page__heading h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+}
+
+.kontakt-page__heading h2 {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: clamp(1.05rem, 1.8vw, 1.4rem);
+    font-weight: 400;
+}
+
+.kontakt-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 28px;
+    margin: 36px 0 28px;
+}
+
+.kontakt-details__item dt {
+    margin-bottom: 5px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.kontakt-details__item dd {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.kontakt-page__content a {
+    color: var(--white);
+    text-decoration-color: var(--red);
+    text-underline-offset: 3px;
+}
+
+.kontakt-page__content a:hover,
+.kontakt-page__content a:focus-visible {
+    color: #ff7b83;
+}
+
+.kontakt-details__item--social dd,
+.kontakt-velitel__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+}
+
+.kontakt-velitel {
+    padding-top: 20px;
+    border-top: 1px solid #394654;
+}
+
+.kontakt-velitel h2 {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.kontakt-velitel__name {
+    margin: 0 0 8px;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.kontakt-velitel__links {
+    font-size: 0.95rem;
+}
+
 .operacni-blok {
     display: grid;
     min-height: min(56vw, 560px);
@@ -355,6 +551,61 @@ body {
 }
 
 @media (max-width: 760px) {
+    .o-nas-page {
+        grid-template-rows: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    }
+
+    .o-nas-page__content {
+        grid-template-columns: minmax(0, 1fr);
+        align-content: center;
+        gap: 18px;
+        padding: 24px 8vw;
+    }
+
+    .o-nas-page__eyebrow {
+        margin-bottom: 8px;
+        font-size: 0.75rem;
+    }
+
+    .o-nas-page__title h1 {
+        font-size: clamp(2.25rem, 9vw, 3.5rem);
+    }
+
+    .o-nas-page__text p {
+        font-size: 0.98rem;
+        line-height: 1.5;
+    }
+
+    .o-nas-page__text p + p {
+        margin-top: 10px;
+    }
+
+    .kontakt-page {
+        grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
+    }
+
+    .kontakt-page__content {
+        padding: 20px clamp(16px, 4vw, 30px);
+    }
+
+    .kontakt-page__heading h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+
+    .kontakt-details {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        margin: 22px 0 18px;
+    }
+
+    .kontakt-details__item dt {
+        margin-bottom: 2px;
+    }
+
+    .kontakt-velitel {
+        padding-top: 14px;
+    }
+
     .operacni-blok {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -425,6 +676,82 @@ body {
         ) top left / 100% 82px no-repeat, var(--panel);
     }
 
+    .kontakt-page {
+        grid-template-columns: minmax(0, 0.55fr) minmax(0, 1.45fr);
+    }
+
+    .kontakt-page__content {
+        padding: 16px 14px;
+    }
+
+    .kontakt-page__eyebrow {
+        margin-bottom: 5px;
+        font-size: 0.68rem;
+    }
+
+    .kontakt-page__heading h1 {
+        font-size: 2rem;
+    }
+
+    .kontakt-page__heading h2 {
+        margin-top: 7px;
+        font-size: 0.95rem;
+    }
+
+    .kontakt-details {
+        gap: 9px;
+        margin: 18px 0 14px;
+    }
+
+    .kontakt-details__item dt {
+        font-size: 0.72rem;
+    }
+
+    .kontakt-details__item dd {
+        font-size: 0.88rem;
+        line-height: 1.35;
+    }
+
+    .kontakt-details__item--social dd,
+    .kontakt-velitel__links {
+        gap: 4px 12px;
+    }
+
+    .kontakt-velitel {
+        padding-top: 10px;
+    }
+
+    .kontakt-velitel__name {
+        font-size: 1rem;
+    }
+
+    .kontakt-velitel__links {
+        flex-direction: column;
+        font-size: 0.82rem;
+    }
+
+}
+
+@media (max-height: 700px) {
+    .o-nas-page__content {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .kontakt-page__content {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .kontakt-details {
+        gap: 8px 20px;
+        margin-top: 16px;
+        margin-bottom: 14px;
+    }
+
+    .kontakt-velitel {
+        padding-top: 10px;
+    }
 }
 
 @media (max-width: 360px) {

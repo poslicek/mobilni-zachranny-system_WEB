@@ -11,13 +11,55 @@
     <link rel="manifest" href="/icon/site.webmanifest">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="kontakt-page-body">
     <div id="site-header"></div>
     <script src="../js/header.js"></script>
-    <main class="stranka">
-        <div class="blok-1" role="img" aria-label="Místo pro úvodní obrázek"></div>
-        <div class="blok-2"></div>
-        <div class="blok-3"></div>
+    <main class="kontakt-page">
+        <div class="kontakt-page__image">
+            <img src="images/kontakty.webp  " alt="Záchranný tým u zdravotnického stanu a sanitního vozu">
+        </div>
+        <section class="kontakt-page__content" aria-labelledby="kontakt-title">
+            <header class="kontakt-page__heading">
+                <p class="kontakt-page__eyebrow">Jsme tu pro vás</p>
+                <h1 id="kontakt-title">Kontakt</h1>
+                <h2>Záchranná služba RR, z. s.</h2>
+            </header>
+
+            <dl class="kontakt-details">
+                <div class="kontakt-details__item">
+                    <dt>Adresa</dt>
+                    <dd>Kořen 60<br>349 53 Olbramov</dd>
+                </div>
+                <div class="kontakt-details__item">
+                    <dt>IČO</dt>
+                    <dd>22767649</dd>
+                </div>
+                <div class="kontakt-details__item">
+                    <dt>Datová schránka</dt>
+                    <dd>zevcqmg</dd>
+                </div>
+                <div class="kontakt-details__item">
+                    <dt>Telefonní číslo</dt>
+                    <dd><a href="tel:+420724800500">+420 724 800 500</a></dd>
+                </div>
+                <div class="kontakt-details__item kontakt-details__item--social">
+                    <dt>Sociální sítě</dt>
+                    <dd>
+                        <a href="https://www.facebook.com/zsr.rangers/" target="_blank" rel="noreferrer">Facebook</a>
+                        <a href="https://www.instagram.com/rescue_rangers_official/" target="_blank" rel="noreferrer">Instagram</a>
+                    </dd>
+                </div>
+            </dl>
+
+            <section class="kontakt-velitel" aria-labelledby="velitel-title">
+                <h2 id="velitel-title">Velitel</h2>
+                <p class="kontakt-velitel__name">Tomáš Rusňák</p>
+                <div class="kontakt-velitel__links">
+                    <a href="tel:+420606500252">+420 606 500 252</a>
+                    <a href="mailto:tomas-rusnak@email.cz">tomas-rusnak@email.cz</a>
+                </div>
+            </section>
+        </section>
     </main>
 </body>
 </html>
